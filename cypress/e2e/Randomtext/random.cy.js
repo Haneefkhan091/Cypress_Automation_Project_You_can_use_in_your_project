@@ -1,7 +1,4 @@
-Important scenerio:
-In cypress with javascript i have an option of Ad new fields after adding that fields i have to apply assertion making sure that field are there.
-scenario is that those fields are dynamic means every time i run those script data need to be change but the assertion will also change according to the data automatically
-Code:
+
 describe('Dynamic Field Test', () => {
   it('Should enter dynamic data and assert', () => {
     // Generate random data for Name, Email, and Address
