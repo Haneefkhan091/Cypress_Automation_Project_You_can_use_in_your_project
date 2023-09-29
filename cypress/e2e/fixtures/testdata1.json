@@ -1,0 +1,13 @@
+
+[
+  {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Alice Smith",
+    "email": "alice@example.com",
+    "password": "securepass"
+  }
+]

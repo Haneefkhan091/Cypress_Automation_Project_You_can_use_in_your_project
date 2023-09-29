@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-09-26T07:14:38.234Z",
+    "end": "2023-09-26T07:14:38.589Z",
+    "duration": 355,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "53d7a7f1-0925-4b4d-911f-4a03df6b5d64",
+      "title": "",
+      "fullFile": "cypress\\e2e\\usepageshere\\usingpageshere.cy.js",
+      "file": "cypress\\e2e\\usepageshere\\usingpageshere.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "58d17fe9-28df-4745-88e7-e6c9128e09fb",
+          "title": "POM globally set",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Testing POM",
+              "fullTitle": "POM globally set Testing POM",
+              "timedOut": null,
+              "duration": 292,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\usepageshere\\\\usingpageshere.cy.js\\\\Testing POM -- before all hook (failed).png\"\n    ]\n  ]\n}",
+              "code": "//   const browsersracktest1 = new LoginPage()\n_browsersracktest.default.fillUsername().type(\"Haneef\");\n_browsersracktest.default.fillemail().type(\"Haneef@gmail.com\");\n_browsersracktest.default.fillpassword().type(\"Haneef@123\", {\n  log: false\n});\n_browsersracktest.default.submitLoginForm().click({\n  force: true\n});",
+              "err": {
+                "message": "TypeError: Cannot read properties of null (reading 'setAttribute')\n\nBecause this error occurred during a `before all` hook we are skipping all of the remaining tests.",
+                "estack": "TypeError: Cannot read properties of null (reading 'setAttribute')\n\nBecause this error occurred during a `before all` hook we are skipping all of the remaining tests.\n    at addStyles (webpack://rahulshettysiteautomtation/./node_modules/cypress-plugin-xhr-toggle/dist/addStyles.js:106:0)\n    at Context.eval (webpack://rahulshettysiteautomtation/./node_modules/cypress-plugin-xhr-toggle/dist/index.js:3:13)",
+                "diff": null
+              },
+              "uuid": "ee82ff2e-ff82-418e-85f6-f0a1cd468a89",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ee82ff2e-ff82-418e-85f6-f0a1cd468a89"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 292,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

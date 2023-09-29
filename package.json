@@ -1,0 +1,29 @@
+{
+  "name": "rahulshettysiteautomtation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules\\.bin\\cypress run",
+    "headTest": "npm run test -- --headed",
+    "chromeTest": "npm run test -- --browser chrome",
+    "recordDashBoardTest": "npm run test -- --record --key 1325dc64-4cc4-4df9-b8f9-1d480cb7a8cb --reporter mochawesome",
+    "GreenKartTest": "npm run test -- --spec \"cypress/integration/GreenKart/*\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@testing-library/cypress": "^9.0.0",
+    "cypress": "^13.2.0",
+    "cypress-autorecord": "^3.1.2",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.6.0"
+  },
+  "dependencies": {
+    "cypress-plugin-api": "^2.11.1",
+    "cypress-plugin-steps": "^1.1.1",
+    "cypress-plugin-xhr-toggle": "^1.0.0",
+    "cypress-real-events": "^1.10.1"
+  },
+  "keywords": [],
+  "description": ""
+}
