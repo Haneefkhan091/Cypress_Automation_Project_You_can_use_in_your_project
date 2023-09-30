@@ -5,6 +5,7 @@
   "scripts": {
     "test": "node_modules\\.bin\\cypress run",
     "headTest": "npm run test -- --headed",
+    "runtest":"npm run test",
     "chromeTest": "npm run test -- --browser chrome",
     "recordDashBoardTest": "npm run test -- --record --key 1325dc64-4cc4-4df9-b8f9-1d480cb7a8cb --reporter mochawesome",
     "GreenKartTest": "npm run test -- --spec \"cypress/integration/GreenKart/*\""
