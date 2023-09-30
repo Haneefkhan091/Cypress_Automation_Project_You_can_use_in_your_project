@@ -5,7 +5,7 @@
   "scripts": {
     "test": "node_modules\\.bin\\cypress run",
     "headTest": "npm run test -- --headed",
-    "runtest":"npm run test",
+    "runtest": "npm run test --",
     "chromeTest": "npm run test -- --browser chrome",
     "recordDashBoardTest": "npm run test -- --record --key 1325dc64-4cc4-4df9-b8f9-1d480cb7a8cb --reporter mochawesome",
     "GreenKartTest": "npm run test -- --spec \"cypress/integration/GreenKart/*\""
@@ -20,6 +20,9 @@
     "cypress-mochawesome-reporter": "^3.6.0"
   },
   "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.6",
+    "@badeball/cypress-cucumber-preprocessor": "latest",
+    "@cypress/browserify-preprocessor": "latest",
     "cypress-plugin-api": "^2.11.1",
     "cypress-plugin-steps": "^1.1.1",
     "cypress-plugin-xhr-toggle": "^1.0.0",
