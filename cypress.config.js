@@ -1,5 +1,8 @@
 const { defineConfig } = require("cypress");
-
+const {addCucumberPreprocessorPlugin} = require("@badeball/cypress-cucumber-preprocessor");
+const {
+  preprocessor,
+} = require("@badeball/cypress-cucumber-preprocessor/browserify");
 
 module.exports = defineConfig({
   reporter: "cypress-mochawesome-reporter",
@@ -12,13 +15,11 @@ module.exports = defineConfig({
   e2e: {
     experimentalRunAllSpecs: true,
     async setupNodeEvents(on, config) {
-
       require("cypress-mochawesome-reporter/plugin")(on);
-      // implement node event listeners here
     },
     projectId: "ncf61t",
-    env:{
-      hideXhr: true
-    }
+    env: {
+      hideXhr: true,
+    },
   },
 });
