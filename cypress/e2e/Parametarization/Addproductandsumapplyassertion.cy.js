@@ -1,11 +1,11 @@
-describe("Find parametarization ", () => {
-  beforeEach(() => {
+describe("Find parametarization ", function(){
+  beforeEach(function()  {
     cy.visit("https://rahulshettyacademy.com/angularpractice/shop");
   });
-  it("verify  parametarization", () => {
+  it("verify  parametarization", function()  {
     const productNames = ["iphone X", "Samsung Note 8", "Nokia Edge"];
     // Iterate through the product names and select each product
-    cy.wrap(productNames).each((productName) => {
+    cy.wrap(productNames).each(function(productName)  {
       cy.selectProductByName(productName);
       //   cy.wait(1000);
     });
@@ -19,7 +19,7 @@ describe("Find parametarization ", () => {
           total += numericValue; // Add the numeric value to the total
         }
       })
-      .then(() => {
+      .then(function() {
         cy.log(`Total: ${total}`); // Log the total after processing all elements
         cy.wrap(total).should("eq", 250000);
       });
