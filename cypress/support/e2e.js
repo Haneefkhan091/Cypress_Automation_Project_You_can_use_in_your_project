@@ -18,20 +18,20 @@ import "./commands";
 import "cypress-real-events";
 import "cypress-plugin-steps";
 import "cypress-plugin-api";
-import 'cypress-plugin-xhr-toggle'
+import "cypress-plugin-xhr-toggle";
 // or
-require('cypress-plugin-xhr-toggle')
-import 'cypress-mochawesome-reporter/register';
+require("cypress-plugin-xhr-toggle");
+import "@cypress-audit/lighthouse/commands";
+import "cypress-mochawesome-reporter/register";
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 Cypress.on("uncaught:exception", (err, runnable) => {
-    // returning false here prevents Cypress from failing the test
-    return false;
-  });
-  
-  cy.on("uncaught:exception", (err, runnable) => {
-    expect(err.message).to.include("of undefined");
-    done();
-    return false;
-  });
-  
+  // returning false here prevents Cypress from failing the test
+  return false;
+});
+
+cy.on("uncaught:exception", (err, runnable) => {
+  expect(err.message).to.include("of undefined");
+  done();
+  return false;
+});

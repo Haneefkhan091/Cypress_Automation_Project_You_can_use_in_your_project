@@ -13,10 +13,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@cucumber/cucumber": "^9.5.1",
+    "@cypress-audit/lighthouse": "^1.4.2",
     "@cypress/browserify-preprocessor": "^3.0.2",
     "@faker-js/faker": "^8.1.0",
     "@testing-library/cypress": "^9.0.0",
-    "cypress": "^13.2.0",
+    "cypress": "^13.3.0",
     "cypress-autorecord": "^3.1.2",
     "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "^3.6.0"
@@ -24,10 +26,16 @@
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^18.0.6",
     "@cypress/browserify-preprocessor": "latest",
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-plugin-api": "^2.11.1",
     "cypress-plugin-steps": "^1.1.1",
     "cypress-plugin-xhr-toggle": "^1.0.0",
-    "cypress-real-events": "^1.10.1"
+    "cypress-real-events": "^1.10.1",
+    "neat-csv": "^5.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "step_definitions": "cypress/e2e/BDDPendingduetoUpdate/ecommerce"
   },
   "keywords": [],
   "description": ""

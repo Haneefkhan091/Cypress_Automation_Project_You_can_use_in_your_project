@@ -2,6 +2,7 @@ describe("Find parametarization ", function(){
   beforeEach(function()  {
     cy.visit("https://rahulshettyacademy.com/angularpractice/shop");
   });
+  
   it("verify  parametarization", function()  {
     const productNames = ["iphone X", "Samsung Note 8", "Nokia Edge"];
     // Iterate through the product names and select each product
