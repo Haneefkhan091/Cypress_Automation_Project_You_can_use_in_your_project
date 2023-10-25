@@ -32,6 +32,7 @@ import "cypress-iframe";
 // or
 require("cypress-iframe");
 import "@cypress-audit/lighthouse/commands";
+// import cypress from "cypress";
 Cypress.Commands.add("getIframe", (iframe) => {
   return cy
     .get(iframe)
@@ -72,4 +73,17 @@ Cypress.Commands.add("loginapi", () => {
     expect(response.status).to.equal(200);
     Cypress.env("token", response.body.token);
   });
+});
+
+const country_code = ["/uk/", "/ca/", "/in/"];
+//Realtime scenerio command
+Cypress.Commands.add("verifycase", (country_code) => {
+  switch (country_code) {
+    case "/uk/":
+      return "United Kingdom";
+    case "/ca/":
+      return "Canada (English)";
+    case "/in/":
+      return "India";
+  }
 });
