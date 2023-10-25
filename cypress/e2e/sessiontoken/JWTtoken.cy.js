@@ -36,6 +36,27 @@ describe("JWT Session", () => {
     cy.get(".order-summary button").click({multiple:true});
     cy.contains('csv').click({force:true})
     
-    cy.readFile(Cypress.config("fileServerFolder")+"/cypress/downloads/order-invoice_Haneef.csv")
+    // cy.readFile(Cypress.config("fileServerFolder")+"/cypress/downloads/order-invoice_Haneef.csv")
+    cy.readFile(Cypress.config("fileServerFolder") + "/cypress/downloads/order-invoice_Haneef.csv").then((fileContent) => {
+      // Split the CSV content by line to get an array of rows
+      const rows = fileContent.split("\n");
+    
+      // Loop through each row and log its content
+      rows.forEach((row, index) => {
+        // Skip the header row (if it exists)
+        if (index === 0) return;
+    
+        // Split the row by the CSV delimiter (usually a comma)
+        const columns = row.split(",");
+    
+        // Log the data from each column
+        cy.log(`Row ${index}:`);
+        columns.forEach((column, columnIndex) => {
+          cy.log(`  Column ${columnIndex + 1}: ${column.trim()}`);
+        });
+      });
+    });
+    
+
   });
 });
