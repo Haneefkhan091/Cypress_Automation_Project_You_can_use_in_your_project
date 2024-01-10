@@ -19,12 +19,15 @@ async function setupNodeEvents2(on, config) {
 
 module.exports = defineConfig({
   reporter: "cypress-mochawesome-reporter",
+  viewportHeight:800,
+  viewportWidth:1280,
   watchForFileChanges: false,
   pageLoadTimeout: 50000,
   experimentalStudio: true,
   chromeWebSecurity: false,
   defaultCommandTimeout: 50000,
   screenshotOnRunFailure: true,
+  experimentalStudio:true,
   e2e: {
     experimentalRunAllSpecs: true,
     setupNodeEvents2,
@@ -67,8 +70,9 @@ module.exports = defineConfig({
       });
     }, // <-- Remove this extra closing bracket
     projectId: "ncf61t",
-    env: {
-      hideXhr: true,
-    },
+    // baseUrl:"https://www.automationpractice.pl",
+    // env: {
+    //   hideXhr: true,
+    // },
   },
 });
