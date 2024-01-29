@@ -1,4 +1,4 @@
-import {faker} from "@faker-js/faker"
+import { faker } from "@faker-js/faker";
 describe("template spec", () => {
   beforeEach(() => {
     cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
